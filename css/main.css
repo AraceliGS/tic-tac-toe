@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.board {
+  margin: 100px auto 0;
+  border-collapse: collapse;
+}
+
+#border-row {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.board td {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.board .border {
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
+}
+
+.board #no-border-bottom {
+  border-right: 5px solid black;
+  border-left: 5px solid black;
+}
+
+.board td:hover {
+  background-color: gray;
+}
+
+
+button {
+  border-radius: 5px;
+  padding: 10px 16px;
+  margin-top: 15px;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  left: 42%;
+  border: none;
+  outline: 0;
+}
