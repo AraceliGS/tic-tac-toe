@@ -42,10 +42,10 @@
 button {
   border-radius: 5px;
   padding: 10px 16px;
-  margin-top: 15px;
+  margin-top: 30px;
   font-family: 'Roboto', sans-serif;
   position: relative;
-  left: 42%;
+  left: 33.3rem;
   border: none;
   outline: 0;
 }
