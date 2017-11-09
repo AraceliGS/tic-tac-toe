@@ -2,32 +2,33 @@ window.onload = function() {
   var board = document.querySelector('.board-js');
   board.addEventListener('click', addX);
 
-  var button = document.getElementsByTagName('button');
-  button.addEventListener('click',resetAll);
+  var button = document.querySelector('button');
+  button.addEventListener('click', resetAll);
+  // button.removeEventListener('click', resetAll);
 };
 
 var centinel = true;
 
-  function addX(event) {
-    if(event.target.matches('td') && event.target.textContent === '') {
-     if (centinel)
-     event.target.textContent = 'X';
-     else
-     event.target.textContent = 'O'
-     centinel = !centinel;
-   }
+function addX(event) {
+  if (event.target.matches('td') && event.target.textContent === '') {
+    if (centinel)
+      event.target.textContent = 'X';
+    else
+      event.target.textContent = 'O';
+    centinel = !centinel;
   }
+}
 
-  function resetAll(event) {
-    var arrayOfTdElements = document.getElementsByTagName('td');
-    var variables = 0;
-    for (var i = 0; i < arrayOfTdElements;i++) {
-      if(arrayOfTdElements[i].textContent !== '') {
-        variables += 1;
-      }
-    }
-
-    if (variables === arrayOfTdElements.length) {
-      arrayOfTdElements[i].textContent = '';
+function resetAll(event) {
+  // alert(event.target);
+  var arrayOfTdElements = document.getElementsByTagName('td');
+  for (var i = 0; i < arrayOfTdElements.length; i++) {
+    arrayOfTdElements[i].textContent = ' ';
+  }
+  for (var i = 0; i < arrayOfTdElements.length; i++) {
+    if (arrayOfTdElements[i].textContent = ' ') {
+      event.preventDefault();
+      location.reload();
     }
   }
+}
